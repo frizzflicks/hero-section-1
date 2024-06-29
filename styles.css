@@ -1,0 +1,170 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+:root {
+    --chamoisee: #ad8350ff;
+    --chinese-violet: #76627dff;
+    --seasalt: #f9f8f8ff;
+    --black: #020100ff;
+    --tan: #e9c094ff;
+
+}
+
+.hero {
+    background: url("https://images.pexels.com/photos/2847648/pexels-photo-2847648.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.main-heading {
+    font-family: Deacon, serif;
+    font-size: 8rem;
+    line-height: calc(8rem - 1.7rem);
+    text-align: center;
+    transition: ease 0.1s;
+}
+
+@font-face {
+    font-family: "Deacon";
+    src: url("/DeaconTest-Black-BF63c8afcc1411e.otf");
+}
+
+.inv {
+    opacity: 0;
+}
+
+#s1 {
+    color: var(--seasalt);
+}
+
+#s2 {
+    color: var(--tan);
+}
+
+.para {
+    max-width: 500px;
+    text-align: center;
+    padding-block: 2rem;
+    position: relative;
+    font-family: Figtree, serif;
+    font-weight: 500;
+    color: var(--chinese-violet);
+    display: flex;
+}
+
+.button {
+    opacity: 0;
+
+    
+    padding-inline: 1.7rem;
+    padding-block: 1rem;
+    font-size: 1.1rem;
+
+    font-weight: 600;
+}
+
+.btn {
+    display: flex;
+    opacity: 1;
+    background: var(--chinese-violet);
+    font-family: Figtree, serif;
+    border-radius: 1rem;
+    padding-inline: 1.7rem;
+    padding-block: 1rem;
+    font-size: 1.1rem;
+    font-family: Overpass, serif;
+    letter-spacing: 0.0px;
+    cursor: pointer;
+    border: none;
+    color: var(--seasalt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+}
+
+.btn:active {
+    background: var(--tan);
+    color: var(--chinese-violet);
+}
+
+.btn:hover {
+    background: #E9C094;
+}
+
+.h-in-view {
+    animation: h-fade-in 1s;
+}
+
+.p-in-view,
+.btn-in-view {
+    animation: p-fade-in 1s;
+}
+
+.p-vis {
+    opacity: 1 !important;
+}
+
+@keyframes h-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes p-fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@media screen and (max-width:789px) {
+    html{
+        font-size: 70%;
+    }
+    .para{
+        max-width: 80vw;
+    }
+}
+@media screen and (max-width:576px){
+    html{
+        font-size: 50%;
+    }
+    .para{
+        font-size: 2rem;
+    }
+    .btn{
+        font-size: 2rem;
+    }
+    .main-heading{
+        font-size: 8rem;
+    }
+}
